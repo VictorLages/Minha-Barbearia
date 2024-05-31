@@ -1,0 +1,303 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+body {
+  background-color: #000000;
+}
+.logo {
+    background-color: #0e0d0d;
+    height: 100px;
+}
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+.header {
+    background-color: #000000;
+    padding-inline: 16px;
+
+    position: sticky;
+    top: 0;
+}
+.nav {
+    width: 1280px;
+    height: 100px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list {
+     display: flex;
+    gap: 32px;
+    list-style: none;
+}
+.nav-list a {
+    font-size: 18px;
+    color: #fff;
+    padding-block: 16px;
+}
+.hamburguer {
+    display: none;
+ border: none;
+ background: none;
+ border-top: 3px solid #fff;
+ cursor: pointer;
+}
+.hamburguer::before,
+.hamburguer::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+.primeira-página {
+   background-image: url(./imagens/VOCÊ\ CONHEC_20240530_171954_0000.png);
+   width: 100%;  
+   height: 800px;
+   background-size: cover;
+   background-attachment: fixed;
+   padding-top: 29px;
+}
+.segunda-página {
+
+    display: flex;
+    justify-content: center;
+    
+}
+.terceira-página {
+    display: flex;
+    justify-content: right;
+}
+.quinta-página {
+    display: flex;
+    justify-content: center;
+}
+.form {
+    background-color: white;
+    position: relative;
+    width: 60vw;
+    height: 50vh;
+    padding-top: 40px;
+    border: 8px solid rgba(255, 255, 255, 0);
+    border-radius: 4px;
+    margin: auto;
+    right: 8px;
+     bottom: 4px;
+}
+label {
+    color: white;
+}
+.form h2 {
+    color: black;
+    font-family: cursive;
+    font-size: 1.9em;
+    text-align: center;
+
+    text-shadow: 900;
+
+}
+.form p {
+    color: black;
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+label {
+    display: none;
+}
+input {
+    font-size: 1.5em;
+    display: inline;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 6px 8px 9px rgb(0, 0, 0);
+}
+.cadastro {
+    height: 50px;
+    width: 30%;
+    font-size: 1.3em;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 7px solid black;
+      margin: auto;
+      margin-top: 20px;
+    display: block;
+    transition: 0.3s all;
+    border: none;
+}
+.cadastro:hover {
+    background-color: #fff;
+    color: #000000;
+}
+
+footer {
+     color: #fff;
+     text-align: center;
+     font-size: 2.4em;
+     font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+    body {
+       overflow-x: hidden; 
+    }
+    .hamburguer {
+        display: block;
+        position: relative;
+        right: 850px;
+        z-index: 1;
+    
+    }
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #000000;
+        font-family: sans-serif;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none; 
+    }
+    .nav-list li:nth-child(1) a {
+          transition: 0.5s 0.2s;
+    }
+    .nav-list li:nth-child(1) a {
+         transition: 0.5s 0.4s;
+    }
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+    .nav.active .hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+    .nav.active .hamburguer::before {
+        transform:rotate(135deg);
+    }
+    .nav.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    .primeira-página {
+        background-image: url(./imagens/Venha\ conhecer\ a_20240531_113439_0000.png);
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .segunda-página img {
+        width: 100%;
+        height: 100%;
+        margin-top: -5px;
+        
+    }
+    .terceira-página img {
+        width: 100%;
+        height: 100%;
+        margin-top: -5px;
+    }
+    .quarta-página img {
+        width: 100%;
+        height: 100%;
+        margin-top: -5px;
+    }
+    .form {
+        position: relative;
+        background-color: #000000;
+        font-size: 1em;
+        width: 100vw;
+        height: 100%;
+        padding-top: 40px;
+        border: 8px solid rgba(255, 255, 255, 0);
+        border-radius: 4px;
+        padding-bottom: 20px;
+        text-align: center;
+        right: 8px;
+         bottom: 4px;
+          
+
+    }
+    .form h2 {
+        color: wheat;
+        font-family: cursive;
+        font-size: 1.8em;
+
+    }
+    .form p {
+        color: #fff;
+        font-size: 1em;
+    }
+    input {
+        font-size: 1.2em;
+        display: block;
+        margin: auto;
+        padding: 5px;
+        margin-top: 20px;
+    
+    }
+    .cadastro {
+        background-color: #fff;
+        color: #000000;
+        font-size: 1.2em;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        border-style: none;
+        margin: auto;
+        margin-top: 5px;
+        width: 54%;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .cadastro:hover {
+        background-color: #000000;
+        color: #fff;
+        
+        
+    }
+    .quinta-página img {
+        width: 100%;
+        height: 100%;
+        margin-top: -5px;
+    }
+    
+    footer p {
+        background-color: #000000;
+        color: white;
+        font-size: 1.3em;
+        text-align: center;
+        margin-top: -5px;
+        font-family:monospace;
+    }
+    footer {
+        font-size: 1.1em;
+    }
+}
